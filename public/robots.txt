@@ -1,0 +1,23 @@
+# *
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://seudominio.com/sitemap.xml
+
+# Regras específicas para bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Bloquear diretórios não públicos (se houver)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Crawl-delay (opcional, use com cautela)
+# Crawl-delay: 1
