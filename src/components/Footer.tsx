@@ -39,7 +39,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-slate text-white">
+    <footer className="text-white">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="mb-12">
           <span className="text-2xl font-bold">

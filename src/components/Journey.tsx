@@ -101,7 +101,7 @@ export function Journey() {
   };
 
   return (
-    <section ref={ref} className="bg-slate py-24 text-white">
+    <section ref={ref} className="py-24 text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

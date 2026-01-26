@@ -58,7 +58,7 @@ export default function Contact() {
   } as const;
 
   return (
-    <section ref={ref} className='bg-slate py-24 text-white'>
+    <section ref={ref} className='py-24 text-white'>
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-2 items-start">
           <motion.div

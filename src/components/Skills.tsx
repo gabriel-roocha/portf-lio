@@ -46,7 +46,7 @@ export function Skills() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-slate py-24 text-white">
+    <section ref={sectionRef} className="py-24 text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="mb-16 text-center font-heading text-4xl font-bold md:text-5xl">
           Habilidades Técnicas

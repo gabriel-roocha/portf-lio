@@ -77,7 +77,7 @@ export function About() {
   };
 
   return (
-    <section ref={ref} className="relative min-h-screen bg-slate">
+    <section ref={ref} className="relative min-h-screen">
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}

@@ -63,7 +63,7 @@ export default function Hero() {
   } as const;
 
   return (
-    <section className="bg-slate sm:min-h-screen flex items-center">
+    <section className="sm:min-h-screen flex items-center">
       <div className="relative isolate w-full px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
