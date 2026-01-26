@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://seudominio.com</loc>
+    <loc>https://gabriel-dev-rust.vercel.app</loc>
     <lastmod>2025-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/#sobre</loc>
+    <loc>https://gabriel-dev-rust.vercel.app/#sobre</loc>
     <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/#habilidades</loc>
+    <loc>https://gabriel-dev-rust.vercel.app/#habilidades</loc>
     <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/#experiencia</loc>
+    <loc>https://gabriel-dev-rust.vercel.app/#experiencia</loc>
     <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/#contato</loc>
+    <loc>https://gabriel-dev-rust.vercel.app/#contato</loc>
     <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
