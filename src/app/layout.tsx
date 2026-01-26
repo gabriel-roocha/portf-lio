@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ScrollToTop } from "@/components/ScrolltoTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,14 +41,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://gabriel-dev-rust.vercel.app'),
+  metadataBase: new URL('https://seudominio.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Gabriel Rocha - Desenvolvedor Full Stack",
     description: "Portfolio profissional de Gabriel Rocha - Desenvolvedor Full Stack especializado em tecnologias modernas como React, Next.js, Node.js e NestJS",
-    url: "https://gabriel-dev-rust.vercel.app",
+    url: "https://seudominio.com",
     siteName: "Gabriel Rocha Portfolio",
     images: [
       {
@@ -101,8 +102,8 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Gabriel Rocha",
               "jobTitle": "Desenvolvedor Full Stack",
-              "url": "https://gabriel-dev-rust.vercel.app",
-              "image": "https://gabriel-dev-rust.vercel.app/minhafoto.jpeg",
+              "url": "https://seudominio.com",
+              "image": "https://seudominio.com/minhafoto.jpeg",
               "sameAs": [
                 "https://github.com/Gabriel-Div",
                 "https://www.linkedin.com/in/gabriel-rocha-46b8b3365/",
@@ -139,6 +140,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ScrollToTop />
         {children}
       </body>
     </html>

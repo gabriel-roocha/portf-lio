@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: prefer-reduced-motion) {
@@ -33,4 +34,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Prevenir scroll restoration automático do navegador */
+@supports (overscroll-behavior: contain) {
+  html {
+    overscroll-behavior: contain;
+  }
 }
