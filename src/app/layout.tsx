@@ -41,14 +41,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://seudominio.com'),
+  metadataBase: new URL('https://gabriel-dev-rust.vercel.app.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Gabriel Rocha - Desenvolvedor Full Stack",
     description: "Portfolio profissional de Gabriel Rocha - Desenvolvedor Full Stack especializado em tecnologias modernas como React, Next.js, Node.js e NestJS",
-    url: "https://seudominio.com",
+    url: "https://gabriel-dev-rust.vercel.app.com",
     siteName: "Gabriel Rocha Portfolio",
     images: [
       {
@@ -102,8 +102,8 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Gabriel Rocha",
               "jobTitle": "Desenvolvedor Full Stack",
-              "url": "https://seudominio.com",
-              "image": "https://seudominio.com/minhafoto.jpeg",
+              "url": "https://gabriel-dev-rust.vercel.app.com",
+              "image": "https://gabriel-dev-rust.vercel.app.com/minhafoto.jpeg",
               "sameAs": [
                 "https://github.com/Gabriel-Div",
                 "https://www.linkedin.com/in/gabriel-rocha-46b8b3365/",

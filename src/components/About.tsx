@@ -1,6 +1,6 @@
 'use client'
 
-import { Clock, BookOpen, Zap, Users, CheckCircle, FileText, MessageSquare } from "lucide-react";
+import { Clock, BookOpen, Zap, CheckCircle, FileText, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -14,49 +14,31 @@ export function About() {
       icon: Clock,
       title: "Cumprimento de Prazos",
       description: "Planejo entregas realistas e cumpro cronogramas – updates regulares e comunicação pró-ativa.",
-      proof: "Média de entrega: 2–4 semanas por sprint (exemplo).",
-      iconColor: "text-sky-400",
-      bgColor: "bg-sky-500/10",
     },
     {
       icon: MessageSquare,
       title: "Comunicação Clara",
       description: "Relatórios objetivos, reuniões com pauta e atualizações diárias quando necessário – reduzo ruído e expectativas erradas.",
-      proof: "Relatórios semanais + board compartilhado.",
-      iconColor: "text-green-400",
-      bgColor: "bg-green-500/10",
     },
     {
       icon: FileText,
       title: "Escopo e Estimativas",
       description: "Quebro requisitos, estimo esforço e proponho prioridades para maximizar ROI do projeto.",
-      proof: "Estimativas com margem e alternativas (MVP / versão 1).",
-      iconColor: "text-violet-400",
-      bgColor: "bg-violet-500/10",
     },
     {
       icon: CheckCircle,
       title: "Qualidade & Testes",
       description: "Práticas de QA: testes automatizados simples, revisão de código e checklist de aceitação antes do deploy.",
-      proof: "Menos bugs em produção e entregas mais estáveis.",
-      iconColor: "text-lime-400",
-      bgColor: "bg-lime-500/10",
     },
     {
       icon: Zap,
       title: "Resolução de Problemas",
       description: "Analiso causas, proponho soluções técnicas e comerciais, e priorizo correções de maior impacto.",
-      proof: "Redução de incidências recorrentes e decisões baseadas em dados.",
-      iconColor: "text-indigo-400",
-      bgColor: "bg-indigo-500/10",
     },
     {
       icon: BookOpen,
       title: "Aprendizado Contínuo",
       description: "Adapto-me a novas stacks e boas práticas – busco sempre melhorias que acelerem o projeto.",
-      proof: "Integro ferramentas modernas e proponho refactors quando trazem ROI.",
-      iconColor: "text-cyan-400",
-      bgColor: "bg-cyan-500/10",
     },
   ];
 
@@ -139,16 +121,16 @@ export function About() {
                   whileHover={{ y: -8, transition: { duration: 0.3 } }}
                   className="group relative overflow-hidden rounded-2xl border border-red-500/20 bg-red-600/10 p-8 backdrop-blur-sm"
                 >
-                  <div className="flex gap-6 items-center">
+                  <div className="flex gap-6 items-center mb-4">
                     <motion.div
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
-                      className="mb-6 inline-flex h-12 w-18 items-center justify-center rounded-xl bg-red-600/30"
+                      className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-600/30"
                     >
                       <Icon className="h-6 w-6 text-red-500" />
                     </motion.div>
 
-                    <h3 className="mb-4 text-xl font-semibold text-white">
+                    <h3 className="text-xl font-semibold text-white">
                       {category.title}
                     </h3>
                   </div>
