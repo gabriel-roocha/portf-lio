@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { Braces, Component, Layers3, Package, Server } from "lucide-react";
+import { Braces, Component, Layers3, Package, Server, ShieldCheck } from "lucide-react";
 
 export default function Hero() {
 
@@ -51,6 +51,17 @@ export default function Hero() {
     },
   } as const;
 
+  const badgeVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  } as const;
+
   return (
     <section className="bg-slate sm:min-h-screen flex items-center">
       <div className="relative isolate w-full px-4 sm:px-6 lg:px-8">
@@ -76,6 +87,19 @@ export default function Hero() {
           animate="visible"
           className="mx-auto max-w-5xl pt-20 pb-4 sm:pt-24 sm:pb-8"
         >
+          <motion.div
+            variants={badgeVariants}
+            className="mb-4 flex justify-center sm:justify-start"
+          >
+            <div className="relative rounded-full px-3 py-1 text-sm text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+              Announcing our next round of funding.{' '}
+              <a href="#" className="font-semibold text-indigo-400">
+                <span aria-hidden="true" className="absolute inset-0" />
+                Read more <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </motion.div>
+
           <div className="text-left w-full">
             <motion.h1
               variants={itemVariants}
