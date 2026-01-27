@@ -138,7 +138,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950`}
       >
         <ScrollToTop />
         {children}
