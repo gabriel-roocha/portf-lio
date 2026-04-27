@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { About } from "@/components/About";
 import { Journey } from "@/components/Journey"
 import { Skills } from "@/components/Skills"
+import { Projects } from "@/components/Projects"
 
 export default function Home() {
   return (
@@ -22,6 +23,10 @@ export default function Home() {
 
         <section id="habilidades" className="scroll-mt-24">
           <Skills />
+        </section>
+
+        <section id="projetos" className="scroll-mt-24">
+          <Projects />
         </section>
 
         <section id="experiencia" className="scroll-mt-24">

@@ -15,28 +15,28 @@ export function Journey() {
       company: "ONG Salvar Cão – Goiânia/GO",
       period: "Jan 2024 - Mar 2024",
       description:
-        "Atuou na concepção completa da experiência do usuário, desenvolvendo o design no Figma e estruturando o X-Design conforme as necessidades do cliente. Foi responsável por traduzir o projeto visual em interfaces funcionais, aplicando os conceitos de UX/UI no desenvolvimento frontend de uma landing page e de outras páginas do projeto.",
+        "Liderou o processo de design end-to-end no Figma, desde wireframes até protótipos navegáveis, aplicando metodologia UX centrada no usuário. Converteu o design system em código React responsivo, reduzindo o gap entre layout e implementação. Entregou landing page e páginas internas dentro do prazo, com foco em acessibilidade e performance web.",
     },
     {
-      title: "Design UX/UI",
+      title: "Designer UX/UI",
       company: "TOO Company – Goiânia/GO",
       period: "Abr 2024 - Jun 2024",
       description:
-        "Responsável pela criação integral da identidade visual e do design da plataforma, incluindo o conceito da marca, a landing page e a página inicial. Desenvolveu toda a experiência do usuário de forma profissional e estratégica, garantindo coerência visual, usabilidade e alinhamento com os objetivos do produto.",
+        "Conduziu a criação da identidade visual completa do produto, incluindo guia de estilo, componentes reutilizáveis e design responsivo para web. Definiu a arquitetura de informação e fluxos de navegação da plataforma, garantindo consistência visual e experiência intuitiva para o usuário final. Colaborou diretamente com stakeholders para alinhar entregas ao roadmap do produto.",
     },
     {
       title: "Desenvolvedor Backend",
       company: "Harpia Solutions – Goiânia/GO",
       period: "Jul 2024 - Set 2024",
       description:
-        "Atuou na reconstrução completa da arquitetura backend, realizando a refatoração do banco de dados e o desenvolvimento do sistema do zero. Implementou soluções de forma organizada e profissional, com versionamento, documentação técnica e boas práticas de desenvolvimento utilizando Git.",
+        "Realizou refatoração completa do banco de dados legado e redesenhou a arquitetura backend do zero, aumentando a manutenibilidade e escalabilidade do sistema. Implementou versionamento com Git, documentação técnica e padrões REST, viabilizando onboarding mais rápido de novos desenvolvedores. Reduziu débito técnico crítico e estabeleceu boas práticas de desenvolvimento para o time.",
     },
     {
       title: "Desenvolvedor Full Stack",
       company: "[8]/actio – Goiânia/GO",
       period: "Out 2024 - Jan 2025",
       description:
-        "Responsável pelo desenvolvimento integral do backend da aplicação, atuando também no apoio ao frontend. Participou ativamente da implementação das funcionalidades, colaborando na integração entre as camadas do sistema e garantindo uma solução consistente e funcional.",
+        "Atuou como desenvolvedor full stack com protagonismo no backend, construindo APIs RESTful robustas e realizando integrações com o frontend React. Participou de todo o ciclo de desenvolvimento — análise de requisitos, implementação, revisão de código e deploy — em ambiente ágil com entregas iterativas. Colaborou diretamente com o time de produto para garantir qualidade técnica e aderência às funcionalidades especificadas.",
     },
   ];
 
