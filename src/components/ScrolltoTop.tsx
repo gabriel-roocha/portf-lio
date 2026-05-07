@@ -9,10 +9,6 @@ export function ScrollToTop() {
 
       if (!hash) {
         window.scrollTo({ top: 0, behavior: 'instant' });
-
-        setTimeout(() => {
-          window.scrollTo({ top: 0, behavior: 'instant' });
-        }, 100);
       }
     }
   }, []);

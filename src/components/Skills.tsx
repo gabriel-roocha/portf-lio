@@ -90,6 +90,8 @@ function SkillBar({ name, level, isVisible, delay }: SkillBarProps) {
   useEffect(() => {
     if (!isVisible) return;
 
+    let timer: ReturnType<typeof setInterval>;
+
     const timeout = setTimeout(() => {
       const duration = 1500;
       const steps = 60;
@@ -97,7 +99,7 @@ function SkillBar({ name, level, isVisible, delay }: SkillBarProps) {
       let current = 0;
       let step = 0;
 
-      const timer = setInterval(() => {
+      timer = setInterval(() => {
         step++;
         current = Math.min(current + increment, level);
         setCurrentLevel(Math.round(current));
@@ -107,11 +109,12 @@ function SkillBar({ name, level, isVisible, delay }: SkillBarProps) {
           setCurrentLevel(level);
         }
       }, duration / steps);
-
-      return () => clearInterval(timer);
     }, delay);
 
-    return () => clearTimeout(timeout);
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(timer);
+    };
   }, [isVisible, level, delay]);
 
   return (

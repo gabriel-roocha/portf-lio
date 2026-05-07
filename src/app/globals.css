@@ -18,4 +18,8 @@ html {
     @apply bg-neutral-950 text-slate-100;
     min-height: 100%;
   }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-red-500;
+  }
 }

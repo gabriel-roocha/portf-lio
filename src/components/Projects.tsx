@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from "react";
+import { useRef, useState, useCallback } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ExternalLink, Code2, Layers, Zap } from "lucide-react";
 import Image from "next/image";
@@ -113,10 +113,10 @@ export function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const prev = () =>
-    setActiveIndex((i) => (i === 0 ? projects.length - 1 : i - 1));
-  const next = () =>
-    setActiveIndex((i) => (i === projects.length - 1 ? 0 : i + 1));
+  const prev = useCallback(() =>
+    setActiveIndex((i) => (i === 0 ? projects.length - 1 : i - 1)), []);
+  const next = useCallback(() =>
+    setActiveIndex((i) => (i === projects.length - 1 ? 0 : i + 1)), []);
 
   // Projetos visíveis: ativo e próximo (em telas grandes)
   const visibleProjects = [

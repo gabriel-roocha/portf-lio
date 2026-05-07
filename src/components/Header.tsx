@@ -5,6 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from "next/link";
 import { Instagram, Github, Linkedin, Phone } from "lucide-react";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 const navigation = [
   { name: 'Início', href: '#inicio' },
@@ -18,11 +19,7 @@ const socialLinks = [
   { icon: Instagram, href: "https://www.instagram.com/gabriel__telle/", label: "Instagram" },
   { icon: Github, href: "https://github.com/Gabriel-Div", label: "Github" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/gabriel-rocha-46b8b3365/", label: "Linkedin" },
-  {
-    icon: Phone, href: "https://wa.me/5562995712980?text=Olá%20Gabriel,%20vi%20seu%20portfólio",
-    target: "_blank",
-    label: "Telefone"
-  },
+  { icon: Phone, href: WHATSAPP_LINK, target: "_blank", label: "Telefone" },
 ];
 
 export default function Header() {

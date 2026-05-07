@@ -17,14 +17,6 @@ export function Footer() {
         { label: "Contato", href: "#contato" }
       ],
     },
-    {
-      title: "Legal",
-      links: [
-        { label: "Termos de Serviço", href: "#" },
-        { label: "Política de Privacidade", href: "#" },
-        { label: "Licença", href: "#" },
-      ],
-    },
   ];
 
   const socialLinks = [
