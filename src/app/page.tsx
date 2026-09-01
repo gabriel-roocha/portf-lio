@@ -7,13 +7,15 @@ import { About } from "@/components/About";
 import { Journey } from "@/components/Journey"
 import { Skills } from "@/components/Skills"
 import { Projects } from "@/components/Projects"
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
     <>
       <Header />
+      <WhatsAppButton />
       <main>
-        <section id="inicio" className="scroll-mt-24">
+        <section id="inicio" className="scroll-mt-24 pt-16 lg:pt-0">
           <Hero />
         </section>
 

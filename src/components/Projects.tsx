@@ -24,18 +24,18 @@ const projects: Project[] = [
     role: "Backend + apoio frontend em ciclo ágil completo",
     highlight: "APIs robustas com entregas iterativas em ambiente ágil",
     description:
-      "Plataforma de treinamento corporativo com cursos, recomendações por IA e assistente virtual. Atuei no desenvolvimento de APIs RESTful e integração com o frontend React em sprints semanais.",
-    images: ["/actio-v2.png"],
+      "Plataforma de treinamento corporativo com cursos, recomendações por inteligência artificial e assistente virtual integrado. Atuei no desenvolvimento de APIs RESTful com NestJS, modelagem de dados em PostgreSQL e integração contínua com o frontend em React, seguindo um fluxo de entregas iterativas organizado em sprints semanais junto ao time de produto.",
+    images: ["/actio.png"],
   },
   {
-    title: "TOO Company",
-    category: "UX/UI + Frontend",
-    stack: ["Figma", "React", "Next.js"],
-    role: "Design system completo + implementação frontend",
-    highlight: "Identidade visual do zero até produção",
+    title: "Harmonicus",
+    category: "Full Stack",
+    stack: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma"],
+    role: "Full stack solo, do backend ao deploy em produção",
+    highlight: "Site público + painel admin com autenticação segura",
     description:
-      "Plataforma educacional com dashboard de cursos, mentorias e eventos. Responsável pela criação da identidade visual e design system completo, com tradução fiel para código React.",
-    images: ["/tooCompany.png"],
+      "Site institucional para psicóloga clínica, com landing page pública (blog de artigos, catálogo de conteúdos e vitrine de livros) e painel administrativo completo para gestão do conteúdo sem dependência técnica. Inclui autenticação JWT, editor de texto rico com sanitização de HTML, upload de imagens e deploy em produção com domínio próprio.",
+    images: ["/harmonicus-hero.png"],
   },
   {
     title: "Harpia Solutions",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     role: "Reestruturação completa da arquitetura backend",
     highlight: "Redução de débito técnico + documentação completa",
     description:
-      "Site institucional e sistema backend para empresa de consultoria estratégica. Reconstrução da base de dados e APIs legadas com padrões REST, versionamento Git e documentação técnica.",
+      "Site institucional e sistema backend para empresa de consultoria estratégica. Reconstrução da base de dados e das APIs legadas seguindo padrões REST, com containerização via Docker para padronizar o ambiente de execução, versionamento organizado em Git e documentação técnica completa, resultando em uma base mais manutenível e mais fácil de evoluir no longo prazo.",
     images: ["/arphia.png"],
   },
 ];
@@ -55,7 +55,7 @@ function ImageCarousel({ images, title }: { images: string[]; title: string }) {
   const next = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
 
   return (
-    <div className="relative w-full h-76 sm:h-84 overflow-hidden rounded-xl bg-neutral-900">
+    <div className="relative w-full overflow-hidden rounded-xl bg-neutral-900">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -63,14 +63,15 @@ function ImageCarousel({ images, title }: { images: string[]; title: string }) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -40 }}
           transition={{ duration: 0.35 }}
-          className="absolute inset-0"
+          className="relative w-full"
         >
           <Image
             src={images[current]}
             alt={`${title} - imagem ${current + 1}`}
-            fill
-            className="object-cover object-top"
+            width={0}
+            height={0}
             sizes="(max-width: 768px) 100vw, 50vw"
+            className="w-full h-auto"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/50 via-transparent to-transparent" />
         </motion.div>
@@ -118,11 +119,7 @@ export function Projects() {
   const next = useCallback(() =>
     setActiveIndex((i) => (i === projects.length - 1 ? 0 : i + 1)), []);
 
-  // Projetos visíveis: ativo e próximo (em telas grandes)
-  const visibleProjects = [
-    projects[activeIndex],
-    projects[(activeIndex + 1) % projects.length],
-  ];
+  const activeProject = projects[activeIndex];
 
   return (
     <section ref={ref} className="py-24 text-white">
@@ -150,52 +147,61 @@ export function Projects() {
           </p>
         </motion.div>
         <div className="relative">
-          <div className="grid gap-6 md:grid-cols-2">
-            {visibleProjects.map((project, i) => (
-              <motion.div
-                key={`${activeIndex}-${i}`}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`${i === 1 ? "hidden md:block" : ""}`}
-              >
-                <ProjectCard project={project} />
-              </motion.div>
-            ))}
+          <div className="flex items-center gap-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={prev}
+              className="hidden md:flex shrink-0 h-11 w-11 items-center justify-center rounded-full border border-red-500/30 bg-red-500/10 text-white transition hover:bg-red-500/20"
+
+              aria-label="Projeto anterior"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </motion.button>
+
+            <motion.div
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_, info) => {
+                if (info.offset.x < -50) next();
+                if (info.offset.x > 50) prev();
+              }}
+              className="flex-1 cursor-grab active:cursor-grabbing"
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeIndex}
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -40 }}
+                  transition={{ duration: 0.35 }}
+                >
+                  <ProjectCard project={activeProject} />
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={next}
+              className="hidden md:flex shrink-0 h-11 w-11 items-center justify-center rounded-full border border-red-500/30 bg-red-500/10 text-white transition hover:bg-red-500/20"
+              aria-label="Próximo projeto"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </motion.button>
           </div>
-          <div className="mt-10 flex items-center justify-between">
-            <div className="flex gap-2">
-              {projects.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveIndex(i)}
-                  className={`h-2 rounded-full transition-all duration-300 ${i === activeIndex ? "w-6 bg-red-500" : "w-2 bg-white/20 hover:bg-white/40"
-                    }`}
-                  aria-label={`Ir para projeto ${i + 1}`}
-                />
-              ))}
-            </div>
-            <div className="flex gap-3">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={prev}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-red-500/30 bg-red-500/10 text-white transition hover:bg-red-500/20"
-                aria-label="Projeto anterior"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={next}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-red-500/30 bg-red-500/10 text-white transition hover:bg-red-500/20"
-                aria-label="Próximo projeto"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </motion.button>
-            </div>
+          <div className="mt-6 flex justify-center gap-2">
+            {projects.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                className={`h-2 rounded-full transition-all duration-300 ${i === activeIndex ? "w-6 bg-red-500" : "w-2 bg-white/20 hover:bg-white/40"
+                  }`}
+                aria-label={`Ir para projeto ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>

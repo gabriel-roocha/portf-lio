@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { Braces, Component, Layers3, Package, Server, ShieldCheck } from "lucide-react";
+import { Braces, Component, Layers3, Package, Server } from "lucide-react";
 
 export default function Hero() {
 
@@ -92,24 +92,23 @@ export default function Hero() {
             className="mb-4 flex justify-center sm:justify-start"
           >
             <div className="relative rounded-full px-3 py-1 text-sm text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-              Para projetos reais.{' '}
+              Para projetos reais.
             </div>
           </motion.div>
 
           <div className="text-left w-full">
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-tight text-balance text-white"
+              className="text-4xl sm:text-5xl lg:text-9xl font-semibold tracking-tight text-balance text-white"
             >
-              Construindo soluções inovadoras e modernas
+              Gabriel Rocha
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
-              className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl font-medium text-pretty text-gray-400"
+              className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl font-medium text-pretty text-gray-400 max-w-240"
             >
-              Sou um desenvolvedor web focado em criar aplicações modernas, eficientes e bem estruturadas.
-              Do design no Figma ao código em produção com Next.js, Node e NestJS, transformo ideias em produtos digitais funcionais, escaláveis e bem pensados.
+              Sou um desenvolvedor Full-Stack focado em fazer aplicacoes modernas e seguras, presando sempre por uma arquitetura bem estruturada e pensada para o seu negocio. Uso Stacks atuais do mercado, deixando seu projeto atualizado com as tecnologias de ponta do mundo tech.
             </motion.p>
 
             <div className="flex flex-wrap gap-4 pt-8">
@@ -145,7 +144,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#experiencia"
-                className="w-full sm:w-auto rounded-xl bg-red-600 px-12 sm:px-16 py-4 sm:py-5 text-sm font-semibold text-white shadow-xs transition-colors duration-300 hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 text-center"
+                className="w-full sm:w-auto rounded-4xl bg-red-600 px-12 sm:px-16 py-4 sm:py-5 text-sm font-semibold text-white shadow-xs transition-colors duration-300 hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 text-center"
               >
                 Ver Experiência
               </motion.a>
@@ -153,7 +152,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#contato"
-                className="w-full sm:w-auto text-sm rounded-xl px-12 sm:px-16 py-4 sm:py-5 text-white border border-red-500/50 font-semibold transition-colors duration-300 hover:bg-red-500/10 text-center"
+                className="w-full sm:w-auto text-sm rounded-4xl px-12 sm:px-16 py-4 sm:py-5 text-white border border-red-500/50 font-semibold transition-colors duration-300 hover:bg-red-500/10 text-center"
               >
                 Contate-me
               </motion.a>

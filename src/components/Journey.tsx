@@ -38,6 +38,13 @@ export function Journey() {
       description:
         "Atuou como desenvolvedor full stack com protagonismo no backend, construindo APIs RESTful robustas e realizando integrações com o frontend React. Participou de todo o ciclo de desenvolvimento — análise de requisitos, implementação, revisão de código e deploy — em ambiente ágil com entregas iterativas. Colaborou diretamente com o time de produto para garantir qualidade técnica e aderência às funcionalidades especificadas.",
     },
+    {
+      title: "Desenvolvedor Full Stack",
+      company: "Rosane Rocha – Psicologia Clínica (Foz do Iguaçu/PR)",
+      period: "Jul 2026 - Ago 2026",
+      description:
+        "Desenvolveu solo, do zero ao deploy, o site institucional e o painel administrativo de uma clínica de psicologia. Construiu API REST em NestJS com autenticação JWT, rate limiting e validação de dados. Implementou frontend em Next.js com editor de texto rico, upload de imagens e SEO dinâmico. Conduziu auditoria de segurança completa, com sanitização de conteúdo contra XSS, e realizou o deploy em produção com domínio próprio e ambientes de banco de dados isolados.",
+    },
   ];
 
   const education = [

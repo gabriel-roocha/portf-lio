@@ -18,7 +18,7 @@ export function About() {
     {
       icon: MessageSquare,
       title: "Comunicação Clara",
-      description: "Relatórios objetivos, reuniões com pauta e atualizações diárias quando necessário – reduzo ruído e expectativas erradas.",
+      description: "Relatórios objetivos, reuniões com pauta e atualizações diárias quando necessário.",
     },
     {
       icon: FileText,
@@ -78,37 +78,59 @@ export function About() {
 
   return (
     <section ref={ref} className="relative min-h-screen">
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="mb-6 font-heading text-4xl max-w-[70rem] font-bold text-white md:text-6xl"
-        >
-          Criativo Design de WebSites e soluções inteligentes
-        </motion.h1>
-
-        <div className="mb-16 grid gap-16 lg:grid-cols-2 lg:items-start">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            className="space-y-6"
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <div>
+          <p className="mb-2 flex items-center gap-2 text-xl font-semibold text-red-400">
+            <motion.span
+              initial={{ width: 0 }}
+              animate={isInView ? { width: 32 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="h-px bg-red-400"
+            />
+            Sobre
+          </p>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="mb-6 font-heading text-4xl max-w-[70rem] font-bold text-white md:text-6xl"
           >
-            <motion.p variants={itemVariants} className="text-lg text-gray-300 md:text-xl">
-              Sou um desenvolvedor full stack com forte base em JavaScript e TypeScript, especializado na construção de aplicações web modernas, escaláveis e orientadas a performance. Possuo experiência sólida no desenvolvimento de APIs e sistemas backend robustos utilizando Node.js e NestJS, bem como na criação de interfaces ricas e responsivas com React e Next.js.
-            </motion.p>
+            Criativo Design de WebSites e soluções inteligentes
+          </motion.h1>
 
-            <motion.p variants={itemVariants} className="text-lg text-gray-300 md:text-xl">
-              Tenho amplo domínio em bancos de dados relacionais, trabalhando principalmente com PostgreSQL e SQLite, sempre aplicando boas práticas de modelagem, performance e segurança. Utilizo Docker para padronizar ambientes, otimizar fluxos de desenvolvimento e garantir maior confiabilidade em produção. Além disso, possuo conhecimento avançado em Figma, o que me permite transformar designs complexos em interfaces funcionais, mantendo fidelidade visual e excelente experiência do usuário.
-            </motion.p>
+          <div className="mb-16 grid gap-16 lg:items-start">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              className="border-l-4 border-red-500 pl-4 p-4 rounded-r-lg space-y-6"
+            >
+              <motion.p variants={itemVariants} className="text-lg text-gray-300 md:text-xl">
+                Sou um desenvolvedor full stack com forte base em JavaScript e TypeScript, especializado na construção de aplicações web modernas, escaláveis e orientadas a performance. Possuo experiência sólida no desenvolvimento de APIs e sistemas backend robustos utilizando Node.js e NestJS, bem como na criação de interfaces ricas e responsivas com React e Next.js.
+              </motion.p>
 
-            <motion.p variants={itemVariants} className="text-lg text-gray-300 md:text-xl">
-              Minha missão é desenvolver soluções digitais eficientes, bem estruturadas e sustentáveis, conectando backend sólido, frontend moderno e design bem executado. Estou em constante evolução técnica, buscando aprimorar arquiteturas, ferramentas e práticas que elevem a qualidade dos projetos em que atuo.
-            </motion.p>
-          </motion.div>
+              <motion.p variants={itemVariants} className="text-lg text-gray-300 md:text-xl">
+                Tenho amplo domínio em bancos de dados relacionais, trabalhando principalmente com PostgreSQL e SQLite, sempre aplicando boas práticas de modelagem, performance e segurança. Utilizo Docker para padronizar ambientes, otimizar fluxos de desenvolvimento e garantir maior confiabilidade em produção. Além disso, possuo conhecimento avançado em Figma, o que me permite transformar designs complexos em interfaces funcionais, mantendo fidelidade visual e excelente experiência do usuário.
+              </motion.p>
 
-          <div className="grid gap-6 sm:grid-cols-2">
+              <motion.p variants={itemVariants} className="text-lg text-gray-300 md:text-xl">
+                Minha missão é desenvolver soluções digitais eficientes, bem estruturadas e sustentáveis, conectando backend sólido, frontend moderno e design bem executado. Estou em constante evolução técnica, buscando aprimorar arquiteturas, ferramentas e práticas que elevem a qualidade dos projetos em que atuo.
+              </motion.p>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="">
+          <p className="mb-6 flex items-center gap-2 text-xl font-semibold text-red-400">
+            <motion.span
+              initial={{ width: 0 }}
+              animate={isInView ? { width: 32 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="h-px bg-red-400"
+            />
+            Especiliações
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 content-start">
             {supportCategories.map((category, index) => {
               const Icon = category.icon;
               return (
@@ -119,13 +141,13 @@ export function About() {
                   initial="hidden"
                   animate={isInView ? "visible" : "hidden"}
                   whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                  className="group relative overflow-hidden rounded-2xl border border-red-500/20 bg-red-600/10 p-8 backdrop-blur-sm"
+                  className="group relative overflow-hidden rounded-2xl border border-red-500/20 bg-red-600/10 p-8 backdrop-blur-sm max-w-120"
                 >
-                  <div className="flex gap-6 items-center mb-4">
+                  <div className="flex gap-4 items-center mb-4">
                     <motion.div
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
-                      className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-600/30"
+                      className="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl bg-red-600/30"
                     >
                       <Icon className="h-6 w-6 text-red-500" />
                     </motion.div>
@@ -134,21 +156,12 @@ export function About() {
                       {category.title}
                     </h3>
                   </div>
-                  <p className="text-gray-300">{category.description}</p>
+                  <p className="text-gray-300 text-left">{category.description}</p>
                 </motion.div>
               );
             })}
           </div>
         </div>
-
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={isInView ? { scaleX: 1 } : {}}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="mt-24"
-        >
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-red-500/50 to-transparent" />
-        </motion.div>
       </div>
 
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent" />

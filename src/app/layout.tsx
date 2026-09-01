@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ScrollToTop } from "@/components/ScrolltoTop";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Gabriel Rocha - Desenvolvedor Full Stack | React, Next.js, Node.js",
+  title: "Gabriel Rocha | Desenvolvedor Full Stack | React, Next.js, Node.js, Nest.js, TypeScript",
   description: "Desenvolvedor Full Stack especializado em React, Next.js, Node.js e NestJS. Criação de aplicações web modernas, escaláveis e otimizadas. Portfolio com projetos em JavaScript e TypeScript.",
   keywords: [
     "desenvolvedor full stack",
@@ -105,9 +101,9 @@ export default function RootLayout({
               "url": "https://gabriel-dev-rust.vercel.app",
               "image": "https://gabriel-dev-rust.vercel.app/minhafoto.jpeg",
               "sameAs": [
-                "https://github.com/Gabriel-Div",
-                "https://www.linkedin.com/in/gabriel-rocha-46b8b3365/",
-                "https://www.instagram.com/gabriel__telle/"
+                "https://github.com/gabriel-roocha",
+                "https://www.linkedin.com/in/gabriel-rocha-sarno?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+                "https://www.instagram.com/gabrielsarnno/"
               ],
               "knowsAbout": [
                 "JavaScript",
@@ -138,7 +134,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950`}
+        className={`${spaceGrotesk.variable} antialiased bg-neutral-950`}
       >
         <ScrollToTop />
         {children}

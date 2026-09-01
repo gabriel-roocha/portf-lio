@@ -10,12 +10,14 @@ html {
   }
 }
 
+
 /* Base global */
 @layer base {
 
   html,
   body {
     @apply bg-neutral-950 text-slate-100;
+    font-family: var(--font-space-grotesk);
     min-height: 100%;
   }
 

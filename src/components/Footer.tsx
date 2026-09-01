@@ -20,9 +20,9 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "https://www.instagram.com/gabriel__telle/", label: "Instagram" },
-    { icon: Github, href: "https://github.com/Gabriel-Div", label: "Github" },
-    { icon: LinkedinIcon, href: "https://www.linkedin.com/in/gabriel-rocha-46b8b3365/", label: "Linkedin" },
+    { icon: Instagram, href: "https://www.instagram.com/gabrielsarnno/", label: "Instagram" },
+    { icon: Github, href: "https://github.com/gabriel-roocha", label: "Github" },
+    { icon: LinkedinIcon, href: "https://www.linkedin.com/in/gabriel-rocha-sarno?utm_source=share_via&utm_content=profile&utm_medium=member_ios", label: "Linkedin" },
     {
       icon: Phone, href: "https://wa.me/5562995712980?text=Olá%20Gabriel,%20vi%20seu%20portfólio",
       target: "_blank",

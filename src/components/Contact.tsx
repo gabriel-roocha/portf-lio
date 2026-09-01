@@ -23,9 +23,9 @@ const contactInfo = [
 ]
 
 const socialLinks = [
-  { icon: Instagram, href: "https://www.instagram.com/gabriel__telle/", label: "Instagram" },
-  { icon: Github, href: "https://github.com/Gabriel-Div", label: "Github" },
-  { icon: LinkedinIcon, href: "https://www.linkedin.com/in/gabriel-rocha-46b8b3365/", label: "Linkedin" },
+  { icon: Instagram, href: "https://www.instagram.com/gabrielsarnno/", label: "Instagram" },
+  { icon: Github, href: "https://github.com/gabriel-roocha", label: "Github" },
+  { icon: LinkedinIcon, href: "https://www.linkedin.com/in/gabriel-rocha-sarno?utm_source=share_via&utm_content=profile&utm_medium=member_ios", label: "Linkedin" },
   { icon: Phone, href: WHATSAPP_LINK, target: "_blank", label: "Telefone" },
 ];
 
@@ -158,14 +158,15 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
             whileHover={{ scale: 1.02 }}
-            className="relative h-[40rem] w-full overflow-hidden rounded-3xl"
+            className="relative w-full overflow-hidden rounded-3xl"
           >
             <Image
-              src="/minhafoto.jpeg"
+              src="/minhafoto-gabriel.jpeg"
               alt="Gabriel Rocha - Desenvolvedor Full Stack especializado em React, Next.js e Node.js"
-              fill
-              className="object-cover"
+              width={0}
+              height={0}
               sizes="(max-width: 768px) 100vw, 50vw"
+              className="w-full h-auto"
               priority
               quality={85}
             />
