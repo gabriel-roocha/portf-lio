@@ -14,9 +14,6 @@
 /coverage
 
 # .gitignore
-public/*.png
-public/*.jpg
-public/*.jpeg
 
 # next.js
 /.next/

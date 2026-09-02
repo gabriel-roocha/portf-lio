@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 lg:px-8">
-      <nav aria-label="Global" className="mx-auto flex flex-col max-w-7xl px-6 py-7 rounded-2xl bg-neutral-900/80 backdrop-blur-md border border-white/10">
+      <nav aria-label="Global" className="mx-auto flex flex-col max-w-7xl px-6 py-6 rounded-2xl bg-neutral-900/80 backdrop-blur-md border border-white/10">
 
         <div className="flex items-center justify-between">
           <a href="#" className="-m-1.5 p-1.5">
