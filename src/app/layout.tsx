@@ -10,7 +10,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Gabriel Rocha | Desenvolvedor Full Stack | React, Next.js, Node.js, Nest.js, TypeScript",
+  title: "Gabriel Rocha | Desenvolvedor Full Stack | React, Next.js, Node.js, NestJS, TypeScript",
   description: "Desenvolvedor Full Stack especializado em React, Next.js, Node.js e NestJS. Criação de aplicações web modernas, escaláveis e otimizadas. Portfolio com projetos em JavaScript e TypeScript.",
   keywords: [
     "desenvolvedor full stack",
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://gabriel-dev-rust.vercel.app'),
+  metadataBase: new URL('https://www.gabrielrochaa.com.br'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Gabriel Rocha - Desenvolvedor Full Stack",
     description: "Portfolio profissional de Gabriel Rocha - Desenvolvedor Full Stack especializado em tecnologias modernas como React, Next.js, Node.js e NestJS",
-    url: "https://gabriel-dev-rust.vercel.app",
+    url: "https://www.gabrielrochaa.com.br",
     siteName: "Gabriel Rocha Portfolio",
     images: [
       {
@@ -98,8 +98,8 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Gabriel Rocha",
               "jobTitle": "Desenvolvedor Full Stack",
-              "url": "https://gabriel-dev-rust.vercel.app",
-              "image": "https://gabriel-dev-rust.vercel.app/minhafoto.jpeg",
+              "url": "https://www.gabrielrochaa.com.br",
+              "image": "https://www.gabrielrochaa.com.br/minhafoto.jpeg",
               "sameAs": [
                 "https://github.com/gabriel-roocha",
                 "https://www.linkedin.com/in/gabriel-rocha-sarno?utm_source=share_via&utm_content=profile&utm_medium=member_ios",

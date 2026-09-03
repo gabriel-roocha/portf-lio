@@ -17,7 +17,7 @@ export function Skills() {
       { name: "TypeScript", level: 90 },
     ],
     [
-      { name: "Node.js/Nest.js", level: 90 },
+      { name: "Node.js/NestJS", level: 90 },
       { name: "React/Next.js", level: 85 },
     ],
     [

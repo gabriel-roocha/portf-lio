@@ -20,7 +20,7 @@ export default function Hero() {
     },
     {
       icon: Layers3,
-      title: "Nest.js",
+      title: "NestJS",
     },
     {
       icon: Package,
@@ -108,7 +108,7 @@ export default function Hero() {
               variants={itemVariants}
               className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl font-medium text-pretty text-gray-400 max-w-240"
             >
-              Sou um desenvolvedor Full-Stack focado em fazer aplicacoes modernas e seguras, presando sempre por uma arquitetura bem estruturada e pensada para o seu negocio. Uso Stacks atuais do mercado, deixando seu projeto atualizado com as tecnologias de ponta do mundo tech.
+              Sou um desenvolvedor Full-Stack focado em fazer aplicações modernas e seguras, prezando sempre por uma arquitetura bem estruturada e pensada para o seu negócio. Uso Stacks atuais do mercado, deixando seu projeto atualizado com as tecnologias de ponta do mundo tech.
             </motion.p>
 
             <div className="flex flex-wrap gap-4 pt-8">

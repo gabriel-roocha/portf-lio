@@ -89,14 +89,14 @@ export function About() {
             />
             Sobre
           </p>
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="mb-6 font-heading text-4xl max-w-[70rem] font-bold text-white md:text-6xl"
           >
             Criativo Design de WebSites e soluções inteligentes
-          </motion.h1>
+          </motion.h2>
 
           <div className="mb-16 grid gap-16 lg:items-start">
             <motion.div
@@ -128,7 +128,7 @@ export function About() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="h-px bg-red-400"
             />
-            Especiliações
+            Especializações
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 content-start">
             {supportCategories.map((category, index) => {

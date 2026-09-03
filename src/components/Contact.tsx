@@ -80,9 +80,9 @@ export default function Contact() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h2 className="font-heading text-2xl font-bold">
+              <h3 className="font-heading text-2xl font-bold">
                 Informações de Contato
-              </h2>
+              </h3>
 
               <p className="mt-2 text-gray-300">
                 Estou disponível para trabalhos freelance e colaborações. Fique à vontade
