@@ -81,16 +81,13 @@ export default function Header() {
                   className="relative text-lg font-semibold text-white hover:text-gray-300 transition-colors pb-1"
                 >
                   {item.name}
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-underline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-600 rounded-full"
-                      initial={{ scaleX: 0, originX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={{ duration: 0.35, ease: 'easeOut' }}
-                      style={{ originX: 0 }}
-                    />
-                  )}
+                  <motion.span
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-600 rounded-full"
+                    initial={false}
+                    animate={{ scaleX: isActive ? 1 : 0 }}
+                    transition={{ duration: 0.35, ease: 'easeOut' }}
+                    style={{ originX: 0 }}
+                  />
                 </a>
               )
             })}
