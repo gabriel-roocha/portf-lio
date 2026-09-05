@@ -70,8 +70,9 @@ function ImageCarousel({ images, title }: { images: string[]; title: string }) {
             alt={`${title} - imagem ${current + 1}`}
             width={0}
             height={0}
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(100vw - 184px), 1096px"
             className="w-full h-auto"
+            quality={85}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/50 via-transparent to-transparent" />
         </motion.div>

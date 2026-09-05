@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from "next/link";
@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Início', href: '#inicio' },
   { name: 'Sobre', href: '#sobre' },
   { name: 'Habilidades', href: '#habilidades' },
+  { name: 'Projetos', href: '#projetos' },
   { name: 'Experiência', href: '#experiencia' },
   { name: 'Contato', href: '#contato' },
 ]
@@ -24,6 +25,27 @@ const socialLinks = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
+
+  useEffect(() => {
+    const sectionIds = navigation.map((item) => item.href.slice(1))
+    const observers: IntersectionObserver[] = []
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id)
+      if (!el) return
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id)
+        },
+        { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+      )
+      observer.observe(el)
+      observers.push(observer)
+    })
+
+    return () => observers.forEach((o) => o.disconnect())
+  }, [])
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 lg:px-8">
@@ -50,11 +72,28 @@ export default function Header() {
           </button>
 
           <div className="hidden lg:flex lg:gap-x-8">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-lg font-semibold text-white hover:text-gray-300 transition-colors">
-                {item.name}
-              </a>
-            ))}
+            {navigation.map((item) => {
+              const isActive = activeSection === item.href.slice(1)
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="relative text-lg font-semibold text-white hover:text-gray-300 transition-colors pb-1"
+                >
+                  {item.name}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-600 rounded-full"
+                      initial={{ scaleX: 0, originX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ duration: 0.35, ease: 'easeOut' }}
+                      style={{ originX: 0 }}
+                    />
+                  )}
+                </a>
+              )
+            })}
           </div>
 
           <div className="hidden lg:flex lg:gap-x-4">
@@ -85,16 +124,23 @@ export default function Header() {
               className="overflow-hidden lg:hidden"
             >
               <div className="flex flex-col gap-1 pt-4 mt-4 border-t border-white/10">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="rounded-lg px-4 py-2.5 text-base font-semibold text-white hover:bg-white/5 transition-colors"
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                {navigation.map((item) => {
+                  const isActive = activeSection === item.href.slice(1)
+                  return (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`rounded-lg px-4 py-2.5 text-base font-semibold transition-colors ${
+                        isActive
+                          ? 'text-red-600 border-l-2 border-red-600 bg-white/5'
+                          : 'text-white hover:bg-white/5'
+                      }`}
+                    >
+                      {item.name}
+                    </a>
+                  )
+                })}
                 <div className="flex gap-5 px-4 pt-4 mt-2 border-t border-white/10">
                   {socialLinks.map((social) => {
                     const Icon = social.icon;

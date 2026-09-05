@@ -165,7 +165,7 @@ export default function Contact() {
               alt="Gabriel Rocha - Desenvolvedor Full Stack especializado em React, Next.js e Node.js"
               width={0}
               height={0}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="w-full h-auto"
               priority
               quality={85}
